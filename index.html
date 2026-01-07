@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="JeeseopKim">
+    <meta name="author" content="JunKyu Lee">
     <title>JunKyu Lee | Research</title>
-    
+
     <link rel="stylesheet" href="jemdoc.css" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
@@ -18,7 +18,7 @@
             $("#research_etc").load("src_research_etc.html");
         });
     </script>
-    
+
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -28,7 +28,7 @@
             margin: auto;
             padding: 20px;
         }
-        
+
         #toptitle {
             text-align: center;
             background: linear-gradient(90deg, #007BFF, #00C6FF);
@@ -38,7 +38,7 @@
             font-size: 24px;
             font-weight: bold;
         }
-        
+
         .container {
             background: white;
             padding: 20px;
@@ -46,7 +46,7 @@
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
             margin-top: 20px;
         }
-        
+
         .button-89 {
             display: inline-block;
             padding: 10px 20px;
@@ -58,56 +58,115 @@
             font-size: 16px;
             transition: all 0.3s ease-in-out;
         }
-        
+
         .button-89:hover {
             background: #0056b3;
             transform: scale(1.05);
         }
-        
+
         img {
             border-radius: 10px;
             transition: transform 0.3s ease-in-out;
         }
-        
+
         img:hover {
             transform: scale(1.1);
             opacity: 1;
         }
-        
+
         #footer {
             text-align: center;
             margin-top: 20px;
             font-size: 14px;
             color: #555;
         }
+
+        .note {
+            color: #555;
+            font-size: 14px;
+            margin-top: 8px;
+        }
+
+        .tagline {
+            font-size: 16px;
+            color: #222;
+            margin-top: 6px;
+        }
     </style>
 </head>
+
 <body>
-    
+
     <div id="toptitle">JunKyu Lee's Research</div>
-    
+
     <div class="container">
         <h2>Research Statement</h2>
-        <p>My research aims to develop theoretical frameworks and tools for energy-efficient computing and robust energy-efficient machine learning in order to support resilient and energy-efficient AI systems. My current interest expands to robotics.</p>
-    </div>
-    
-    <div class="container">
-        <h2>Research Areas</h2>
-        <p class="centered">
-            <a href="page_research.html" class="button-89">Overview</a> <br>
-            <a href="eec.html" class="button-89">Energy-Efficient Computing <img src="imgs_compressed/cooperative_loco_trim.gif" width="275px" style="opacity: 0.8"></a>
-            <a href="page_research_etc.html" class="button-89">Mixed Precision Methods <img src="imgs_compressed/hddpc.gif" width="275px" style="opacity: 0.8"></a><br>
-            <a href="page_research_safety.html" class="button-89">Adaptive AI Systems <img src="imgs_compressed/safe_coordination.gif" width="275px" style="opacity: 0.8"></a>
-            <a href="page_research_bi_quad.html" class="button-89">Robust Energy-Efficient Machine Learning <img src="imgs_compressed/achilles.gif" width="275px" style="opacity: 0.8"></a>
+
+        <p class="tagline">
+            I study how efficiency-oriented design choices induce structured instabilities in neural systems,
+            and how such instabilities can be characterized and controlled.
+        </p>
+
+        <p>
+            Many efficient AI techniques—e.g., quantization, pruning, sparsity, low-rank adaptation, and
+            systems-level constraints—are often evaluated primarily through average accuracy or throughput.
+            My work treats efficiency as a <b>first-class system transformation</b> that can reshape system dynamics,
+            producing <b>structured failure modes</b> (instability, brittleness, and unpredictability) that are not
+            captured by standard metrics. I develop methods to (i) make these instabilities explicit,
+            (ii) characterize them with principled measurements and benchmarks, and (iii) design control and
+            correction mechanisms that enable predictable and reliable efficient AI.
+        </p>
+
+        <p class="note">
+            <i class="fa-solid fa-circle-info"></i>
+            Robotics (e.g., legged locomotion) is used as a concrete testbed where efficiency–instability–control trade-offs
+            are unavoidable and measurable.
         </p>
     </div>
-    
+
+    <div class="container">
+        <h2>Research Areas</h2>
+
+        <p class="centered">
+            <a href="page_research.html" class="button-89">Overview</a>
+            <br>
+
+            <a href="eec.html" class="button-89">
+                Efficiency as System Transformation
+                <img src="imgs_compressed/cooperative_loco_trim.gif" width="275px" style="opacity: 0.8" alt="Efficiency / systems testbed">
+            </a>
+
+            <a href="page_research_etc.html" class="button-89">
+                Characterization & Measurement (Metrics/Benchmarks)
+                <img src="imgs_compressed/hddpc.gif" width="275px" style="opacity: 0.8" alt="Characterization / measurement">
+            </a>
+            <br>
+
+            <a href="page_research_safety.html" class="button-89">
+                Secure & Robust Efficient Models (Safety)
+                <img src="imgs_compressed/safe_coordination.gif" width="275px" style="opacity: 0.8" alt="Safety / robustness">
+            </a>
+
+            <a href="page_research_bi_quad.html" class="button-89">
+                Instability Control & Correction (Robotics Testbed)
+                <img src="imgs_compressed/achilles.gif" width="275px" style="opacity: 0.8" alt="Control / correction">
+            </a>
+        </p>
+
+        <p class="note">
+            The four areas above are intentionally organized to reflect one program:
+            <b>efficiency → structured instability → characterization → control/correction</b>.
+        </p>
+    </div>
+
+    <!-- Auto-loaded sections -->
     <div id="research_cooperation" class="container"></div>
     <div id="research_safety" class="container"></div>
     <div id="research_leggedrobots" class="container"></div>
     <div id="research_etc" class="container"></div>
-    
-    <div id="footer">Page generated &copy; 2025</div>
-    
+
+    <div id="footer">© 2025 JunKyu Lee</div>
+
 </body>
 </html>
+
